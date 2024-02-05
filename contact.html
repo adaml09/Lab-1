@@ -43,6 +43,18 @@ Version: 1.0
             </li>
           </ul>
         </div>
-      </nav>
+      </nav> 
+  <form name="myForm" onsubmit="return contactLog()" method="post"
+      action="./Scripts/app.js">
+    <label>First Name:</label>
+    <input type="text" name="fname" maxlength="30" autocomplete="off"/>
+    <label>Last Name:</label>
+    <input type="text" name="lname" maxlength="30" autocomplete="off"/>
+    <label>Email:</label>
+    <input type="email" name="email" maxlength="30" autocomplete="off"/>
+    <label>Phone Number:</label>
+    <input type="text" name="phoneNumber" maxlength="30" autocomplete="off"/>
+    <input type="submit" value="Submit"/>
+  </form>
 </body>
 </html>
