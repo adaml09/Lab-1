@@ -1,0 +1,14 @@
+.backGround{
+    background-image: url('backGround.jpeg');
+    background-size: cover;
+}
+
+.indexHeading{
+    color: aliceblue;
+}
+
+.welcome{
+    color: aliceblue;
+    text-align: center;
+    border: 3px solid powderblue;
+}
