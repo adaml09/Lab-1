@@ -1,5 +1,4 @@
-const { dochub } = require("fontawesome");
-
+//const { dochub } = require("fontawesome");
 /**
  * Program: Lab-1-app
  * Programmer: Adam LeBlanc
@@ -7,44 +6,43 @@ const { dochub } = require("fontawesome");
  * Version: 1.0
  */
 console.log("Script is running");
+// adding text to the fixed bottom navbar
+const bottomNav = document.getElementsByClassName('navbar navbar-inverse navbar-fixed-bottom')
+bottomNav[0].innerHTML = "&copy 2024 Adam LeBlanc";
 
 // creating consants for all the heading elemnts
-var headingIndex = document.getElementsByClassName('indexHeading');
-var headingAbout = document.getElementsByClassName('headingAbout');
-var headingContact = document.getElementsByClassName('headingContact');
-var headingServices = document.getElementsByClassName('headingService');
-var headingProducts = document.getElementsByClassName('headingProducts');
+var headingIndex = document.getElementsByTagName('h1');
+headingIndex[0].innerHTML = "Lab 1 - Adam LeBlanc";
+//var headingAbout = document.getElementsByClassName('headingAbout');
+headingAbout[1].innerHTML = "About Me";
+//var headingContact = document.getElementsByClassName('headingContact');
+headingContact[2].innerHTML = "Contact Me";
+//var headingServices = document.getElementsByClassName('headingService');
+headingServices[3].innerHTML = "Services";
+//var headingProducts = document.getElementsByClassName('headingProducts');
+headingProducts[4].innerHTML = "Products"
 
 console.log(headingIndex);
-
-// creating variables for the heading text to be injected into the elements
-const headingIndexText = "Lab 1 - Adam LeBlanc";
-const headingAboutText = "About Me";
-const headingContactText = "Contact Me";
-const headingServicesText = "Services";
-const headingProductsText = "Products";
 
 // Code to inject the text into the h1 tags of the corrosponding HTML pages
 if(document.getElementsByClassName('indexHeading')){
     headingIndex[0].innerHTML = "Lab 1 - Adam LeBlanc";
-}else if(document.getElementsByClassName('headingAbout')){
-    headingAbout[0].innerHTML = "About Me";
-}else if(document[0].getElementsByClassName('headingContact')){
-    headingContact[0].innerHTML = "Contact Me";
-}else if(document.getElementsByClassName('.headingService')){
-    headingServices[0].innerHTML = "Services";
-}else if(document.getElementsByClassName('headingProducts')){
-    headingServices[0].innerHTML= "Products";
 }
 
 // function to console log the contact info data
-function contactLog(e){
-    let fName = document.getElementsByName("fname");
+function contactLog() {
+    let fName = document.getElementsByName("fname")[0].value;
     console.log(fName);
-    let lName = document.getElementsByName("lname");
+
+    let lName = document.getElementsByName("lname")[0].value;
     console.log(lName);
-    let email = document.getElementsByName("email");
+
+    let email = document.getElementsByName("email")[0].value;
     console.log(email);
-    let phoneNumber = document.getElementsByName("PhoneNumber");
+
+    let phoneNumber = document.getElementsByName("phoneNumber")[0].value;
     console.log(phoneNumber);
+
+    // Return false to prevent the form from submitting
+    return false;
 }
